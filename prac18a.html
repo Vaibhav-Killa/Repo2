@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practical 18</title>
+        <link rel="stylesheet" href="prac18a.css">
+    </head>
+    <body>
+        <!--Header-->
+        <div class="Header">
+            <h3>Vaibhav Killa</h3>
+            <p>This is solution for Practical 18(a)</p>
+        </div>
+        <!--Content-->
+        <div class="Content">
+            <fieldset>
+                <legend>Login Page</legend>
+                <form action="timetable.html" onsubmit="return validform()">
+                    <p>
+                        <label for="Email">Email</label>
+                        <input type="email" name="Email" id="Email">
+                    </p>
+                    <p>
+                        <label for="Enter your password">Enter your password</label>
+                        <input type="password" name="password" id="password">
+                    </p>
+                    <p>
+                        <input type="submit" value="submit">
+                        <input type="reset" value="reset">
+                    </p>
+                    <p>
+                        Don't have an Account?<a href="logim.html">Register</a>
+                    </p>
+                </form>
+            </fieldset>
+        </div>
+        <!--Validation-->
+        <div class="Validation">
+            <script>
+                function validform(){
+                   let email=document.getElementById("Email").value;
+                   let password=document.getElementById("password").value;
+                   if(email==""||password==""){
+                    alert("Please Enter your details");
+                    return false;
+                   }
+                   if(!email.includes("@")||!email.includes(".")){
+                    alert("Please Enter a valid email");
+                    return false;
+                   }
+                   else{
+                    alert("You have logged in successfully");
+                    return true;
+                   }
+                }
+            </script>
+        </div>
+        <!--Footer-->
+       <div class="Footer">
+        <p>&copy;Vaibhav 2026</p>
+       </div>
+    </body>
+</html>
